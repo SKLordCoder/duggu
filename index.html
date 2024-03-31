@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Duggu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h1 class="head1" id="head2">Will You Be My Girlfriend?</h1>
+      <p id="p12"></p>
+      <div class="buttons">
+        <button class="btn" id="btn1">Yes</button>
+        <button class="btn" id="btn2">No</button>
+      </div>
+    </div>
+    <script>
+      let btn1 = document.getElementById("btn1");
+      let btn2 = document.getElementById("btn2");
+      let head1 = document.querySelector("#head2");
+      let p12 = document.querySelector("#p12");
+      let ar = [
+        "Pls Ban Jao🥲",
+        "I am Begging You😭",
+        "Ban Jao Na🥲",
+        "Pls I am a Good Boy😊",
+        "I will Always Keep You Happy😁",
+        "I Know How To Respect You😊",
+        "Why Not?🥲",
+        "Ban jao na pls😭",
+      ];
+      btn2.addEventListener("click", () => {
+        let randnum = Math.floor(Math.random() * 8);
+        head1.innerHTML = ar[randnum];
+      });
+      btn1.addEventListener("click", () => {
+        head1.innerHTML = "I Know You Love Me😍";
+        p12.innerHTML =
+          "You know why i love you because you have put in the same efforts for me as i have put in for you. can you pls propose me in your style this in my style to propose you.";
+        btn1.style.display = "none";
+        btn2.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
